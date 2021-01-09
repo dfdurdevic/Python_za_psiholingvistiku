@@ -12,7 +12,7 @@ import random
 dalje = True
 
 while dalje:
-    print "Zamislio sam broj izmedju 1 i 100. Pogodi ga!"
+    print("Zamislio sam broj izmedju 1 i 100. Pogodi ga!")
 	# sada se generise ("zamislja") slucajan broj
 	# i pamti se u promenljivoj broj
     broj = random.randint(1, 100)
@@ -20,32 +20,32 @@ while dalje:
     broj_pokusaja = 5
 
     while broj_pokusaja > 0:
-        print "Ostalo je jos {} pokusaja".format(broj_pokusaja)
+        print (f"Ostalo je jos {broj_pokusaja} pokusaja")
 
 		# sada se cita korisnikov pokusaj pogadjanja sa tastature
-        unos = int(raw_input())
+        unos = int(input())
 
 		# korisnik je pokusao da pogodi, treba smanjiti broj
 		# preostalih pokusaja za 1.
         broj_pokusaja = broj_pokusaja-1
 
         if unos == broj:
-            print "Bravo! Pogodio si!"
+            print ("Bravo! Pogodio si!")
             break
         elif unos < broj:
-            print "Zamisljeni broj je veci"
+            print ("Zamisljeni broj je veci")
         else:
-            print "Zamisljeni broj je manji"
+            print ("Zamisljeni broj je manji")
 
     if broj_pokusaja == 0:
-        print"Zamislio sam broj {}".format(broj)
+        print(f"Zamislio sam broj {broj}")
 
-    print "Da li zelis ponovo? Unesi D ili d za ponavljanje"
+    print ("Da li zelis ponovo? Unesi D ili d za ponavljanje")
 
 	# Sada se cita korisnikova komanda za dalji rad.
 	# Ako korisnik unese D ili d, ponavlja se pogadjanje.
 	# U suprotnom, prekida se program.
-    izbor = raw_input()
+    izbor = input()
 	# Ovde se pretpostavlja da ce korisnikova komanda
 	# traziti da se prekine program. Zato se promenljiva
 	# dalje postavlja na netacnu logicku vrednost.

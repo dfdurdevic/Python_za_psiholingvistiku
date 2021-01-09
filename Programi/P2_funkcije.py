@@ -22,9 +22,9 @@ def logistic(x):
     return 1.0 / (1.0 + math.exp(-x))
 
 
-pocetak = float(raw_input("start?"))
-kraj = float(raw_input("kraj?"))
-korak = float(raw_input("korak?"))
+pocetak = float(input("start?"))
+kraj = float(input("kraj?"))
+korak = float(input("korak?"))
 
 # otvaranje datoteke za upis. Voditi racuna da ce prethodni sadrzaj
 # datoteke biti obrisan. U slucaju da datoteka prethodno ne postoji,
@@ -37,8 +37,8 @@ while trenutni < kraj:
 	# sledeci red je zakomentarisan zato sto program treba da sacuva
 	# podatke u datoteci. U slucaju da se zeli ispis na ekranu, treba
 	# ukloniti komentar.
-    # print "{}\t{}\t{}".format(trenutni, sqr(trenutni), logistic(trenutni))
-    dat.write("{}\t{}\t{}\n".format(trenutni, sqr(trenutni), logistic(trenutni)))
+    # print ("{0}\t{1}\t{2}".format(trenutni, sqr(trenutni), logistic(trenutni)))
+    dat.write("{0}\t{1}\t{2}\n".format(trenutni, sqr(trenutni), logistic(trenutni)))
 
     trenutni = trenutni+korak
 

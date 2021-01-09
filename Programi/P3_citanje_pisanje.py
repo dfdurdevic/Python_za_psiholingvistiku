@@ -36,7 +36,7 @@ with open("matrica.txt", "r") as ulaz:
 
 		# U izlaznu datoteku ispise najpre broj kolona, zatim
 		# broj vrsta, vodeci racuna o zarezu.
-        izlaz.write("{},{}\n".format(br_kol, br_vrsta))
+        izlaz.write("{0},{1}\n".format(br_kol, br_vrsta))
 
 		# sada se formira matrica od potrebnog broja vrsta,
 		# svaka vrsta ima jedan element - prazan string.
